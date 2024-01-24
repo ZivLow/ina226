@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to Ziv Low’s INA226 documentation! &mdash; INA226  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            INA226
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Welcome to Ziv Low’s INA226 documentation!</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+<li><a class="reference internal" href="#api">API</a><ul>
+<li><a class="reference internal" href="#_CPPv46INA226"><code class="docutils literal notranslate"><span class="pre">INA226</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N6INA2268I2C_InitE10gpio_num_t10gpio_num_t8uint16_t"><code class="docutils literal notranslate"><span class="pre">INA226::I2C_Init()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#_CPPv413INA226_Driver"><code class="docutils literal notranslate"><span class="pre">INA226_Driver</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver18GetShuntVoltage_uVEv"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::GetShuntVoltage_uV()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver16GetBusVoltage_mVEv"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::GetBusVoltage_mV()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver13GetCurrent_uAEv"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::GetCurrent_uA()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver11GetPower_uWEv"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::GetPower_uW()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver9GetConfigEv"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::GetConfig()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver17GetManufacturerIDEv"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::GetManufacturerID()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver8GetDieIDEv"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::GetDieID()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver16GetOperatingModeEv"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::GetOperatingMode()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver16GetAveragingModeEv"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::GetAveragingMode()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver27GetBusVoltageConversionTimeEv"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::GetBusVoltageConversionTime()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver29GetShuntVoltageConversionTimeEv"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::GetShuntVoltageConversionTime()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver19GetAlertTriggerMaskEv"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::GetAlertTriggerMask()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver18GetAlertLimitValueEv"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::GetAlertLimitValue()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver5ResetEv"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::Reset()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver9CalibrateEK8uint32_tK8uint32_t"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::Calibrate()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver9SetConfigEK8uint16_t"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::SetConfig()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver16SetOperatingModeE13OperatingMode"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::SetOperatingMode()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver16SetAveragingModeE13AveragingMode"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::SetAveragingMode()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver27SetBusVoltageConversionTimeE14ConversionTime"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::SetBusVoltageConversionTime()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver29SetShuntVoltageConversionTimeE14ConversionTime"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::SetShuntVoltageConversionTime()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver19SetAlertTriggerMaskE16AlertTriggerMask"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::SetAlertTriggerMask()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver18SetAlertLimitValueE8uint16_t"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::SetAlertLimitValue()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver5ConstE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::Const</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver5Const18BUS_VOLTAGE_LSB_uVE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::Const::BUS_VOLTAGE_LSB_uV</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver5Const20SHUNT_VOLTAGE_LSB_nVE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::Const::SHUNT_VOLTAGE_LSB_nV</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver5Const16POWER_LSB_FACTORE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::Const::POWER_LSB_FACTOR</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver5Const18CONFIG_RESET_VALUEE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::Const::CONFIG_RESET_VALUE</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver8RegisterE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::Register</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver8Register13CONFIGURATIONE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::Register::CONFIGURATION</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver8Register13SHUNT_VOLTAGEE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::Register::SHUNT_VOLTAGE</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver8Register11BUS_VOLTAGEE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::Register::BUS_VOLTAGE</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver8Register5POWERE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::Register::POWER</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver8Register7CURRENTE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::Register::CURRENT</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver8Register11CALIBRATIONE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::Register::CALIBRATION</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver8Register11MASK_ENABLEE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::Register::MASK_ENABLE</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver8Register11ALERT_LIMITE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::Register::ALERT_LIMIT</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver8Register15MANUFACTURER_IDE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::Register::MANUFACTURER_ID</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver8Register6DIE_IDE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::Register::DIE_ID</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver10ConfigMaskE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::ConfigMask</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver10ConfigMask14OPERATING_MODEE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::ConfigMask::OPERATING_MODE</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver10ConfigMask29SHUNT_VOLTAGE_CONVERSION_TIMEE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::ConfigMask::SHUNT_VOLTAGE_CONVERSION_TIME</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver10ConfigMask27BUS_VOLTAGE_CONVERSION_TIMEE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::ConfigMask::BUS_VOLTAGE_CONVERSION_TIME</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver10ConfigMask14AVERAGING_MODEE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::ConfigMask::AVERAGING_MODE</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver10ConfigMask5RESETE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::ConfigMask::RESET</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver12ConfigOffsetE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::ConfigOffset</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver12ConfigOffset14OPERATING_MODEE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::ConfigOffset::OPERATING_MODE</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver12ConfigOffset29SHUNT_VOLTAGE_CONVERSION_TIMEE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::ConfigOffset::SHUNT_VOLTAGE_CONVERSION_TIME</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver12ConfigOffset27BUS_VOLTAGE_CONVERSION_TIMEE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::ConfigOffset::BUS_VOLTAGE_CONVERSION_TIME</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver12ConfigOffset14AVERAGING_MODEE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::ConfigOffset::AVERAGING_MODE</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver12ConfigOffset5RESETE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::ConfigOffset::RESET</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver13OperatingModeE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::OperatingMode</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver13OperatingMode10POWER_DOWNE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::OperatingMode::POWER_DOWN</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver13OperatingMode23SHUNT_VOLTAGE_TRIGGEREDE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::OperatingMode::SHUNT_VOLTAGE_TRIGGERED</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver13OperatingMode21BUS_VOLTAGE_TRIGGEREDE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::OperatingMode::BUS_VOLTAGE_TRIGGERED</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver13OperatingMode23SHUNT_AND_BUS_TRIGGEREDE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::OperatingMode::SHUNT_AND_BUS_TRIGGERED</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver13OperatingMode7ADC_OFFE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::OperatingMode::ADC_OFF</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver13OperatingMode24SHUNT_VOLTAGE_CONTINUOUSE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::OperatingMode::SHUNT_VOLTAGE_CONTINUOUS</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver13OperatingMode22BUS_VOLTAGE_CONTINUOUSE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::OperatingMode::BUS_VOLTAGE_CONTINUOUS</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver13OperatingMode24SHUNT_AND_BUS_CONTINUOUSE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::OperatingMode::SHUNT_AND_BUS_CONTINUOUS</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver13AveragingModeE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::AveragingMode</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver13AveragingMode8SAMPLE_1E"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::AveragingMode::SAMPLE_1</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver13AveragingMode8SAMPLE_4E"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::AveragingMode::SAMPLE_4</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver13AveragingMode9SAMPLE_16E"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::AveragingMode::SAMPLE_16</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver13AveragingMode9SAMPLE_64E"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::AveragingMode::SAMPLE_64</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver13AveragingMode10SAMPLE_128E"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::AveragingMode::SAMPLE_128</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver13AveragingMode10SAMPLE_256E"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::AveragingMode::SAMPLE_256</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver13AveragingMode10SAMPLE_512E"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::AveragingMode::SAMPLE_512</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver13AveragingMode11SAMPLE_1024E"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::AveragingMode::SAMPLE_1024</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver14ConversionTimeE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::ConversionTime</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver14ConversionTime11TIME_140_uSE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::ConversionTime::TIME_140_uS</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver14ConversionTime11TIME_204_uSE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::ConversionTime::TIME_204_uS</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver14ConversionTime11TIME_332_uSE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::ConversionTime::TIME_332_uS</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver14ConversionTime11TIME_588_uSE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::ConversionTime::TIME_588_uS</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver14ConversionTime12TIME_1100_uSE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::ConversionTime::TIME_1100_uS</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver14ConversionTime12TIME_2116_uSE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::ConversionTime::TIME_2116_uS</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver14ConversionTime12TIME_4156_uSE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::ConversionTime::TIME_4156_uS</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver14ConversionTime12TIME_8244_uSE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::ConversionTime::TIME_8244_uS</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver16AlertTriggerMaskE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::AlertTriggerMask</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver16AlertTriggerMask18SHUNT_OVER_VOLTAGEE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::AlertTriggerMask::SHUNT_OVER_VOLTAGE</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver16AlertTriggerMask19SHUNT_UNDER_VOLTAGEE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::AlertTriggerMask::SHUNT_UNDER_VOLTAGE</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver16AlertTriggerMask16BUS_OVER_VOLTAGEE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::AlertTriggerMask::BUS_OVER_VOLTAGE</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver16AlertTriggerMask17BUS_UNDER_VOLTAGEE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::AlertTriggerMask::BUS_UNDER_VOLTAGE</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver16AlertTriggerMask16POWER_OVER_LIMITE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::AlertTriggerMask::POWER_OVER_LIMIT</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver16AlertTriggerMask16CONVERSION_READYE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::AlertTriggerMask::CONVERSION_READY</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver16AlertTriggerMask19ALERT_FUNCTION_FLAGE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::AlertTriggerMask::ALERT_FUNCTION_FLAG</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver16AlertTriggerMask21CONVERSION_READY_FLAGE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::AlertTriggerMask::CONVERSION_READY_FLAG</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver16AlertTriggerMask18MATH_OVERFLOW_FLAGE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::AlertTriggerMask::MATH_OVERFLOW_FLAG</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver16AlertTriggerMask14ALERT_POLARITYE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::AlertTriggerMask::ALERT_POLARITY</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver16AlertTriggerMask18ALERT_LATCH_ENABLEE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::AlertTriggerMask::ALERT_LATCH_ENABLE</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver16AlertTriggerMask5ERRORE"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::AlertTriggerMask::ERROR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#_CPPv4N13INA226_Driver4InitEK8uint32_tK8uint32_t"><code class="docutils literal notranslate"><span class="pre">INA226_Driver::Init()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">INA226</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Welcome to Ziv Low’s INA226 documentation!</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="welcome-to-ziv-low-s-ina226-documentation">
+<h1>Welcome to Ziv Low’s INA226 documentation!<a class="headerlink" href="#welcome-to-ziv-low-s-ina226-documentation" title="Link to this heading"></a></h1>
+<p>This library component provides an easier way to use the INA226 power monitor IC.
+This C++ library is written specifically for the ESP-IDF platform (at least ESP-IDF v5.2).</p>
+<p>Take a look at the provided example code for inspiration on how to use this library.</p>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+<section id="api">
+<h1>API<a class="headerlink" href="#api" title="Link to this heading"></a></h1>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv46INA226">
+<span id="_CPPv36INA226"></span><span id="_CPPv26INA226"></span><span id="INA226"></span><span class="target" id="classINA226"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INA226</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv413INA226_Driver" title="INA226_Driver"><span class="n"><span class="pre">INA226_Driver</span></span></a><a class="headerlink" href="#_CPPv46INA226" title="Link to this definition"></a><br /></dt>
+<dd><p>Represents an <a class="reference internal" href="#classINA226"><span class="std std-ref">INA226</span></a> device for current and power monitoring. </p>
+<p>This class provides an interface for interacting with the <a class="reference internal" href="#classINA226"><span class="std std-ref">INA226</span></a> device over I2C communication. It allows initializing the I2C bus, writing to and reading from the device registers, and handling I2C-related errors. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6INA2268I2C_InitE10gpio_num_t10gpio_num_t8uint16_t">
+<span id="_CPPv3N6INA2268I2C_InitE10gpio_num_t10gpio_num_t8uint16_t"></span><span id="_CPPv2N6INA2268I2C_InitE10gpio_num_t10gpio_num_t8uint16_t"></span><span id="INA226::I2C_Init__gpio_num_t.gpio_num_t.uint16_t"></span><span class="target" id="classINA226_1a23bcd7c1bd459fa2c70190cb792b11ec"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">expected</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">runtime_error</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">I2C_Init</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">gpio_num_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sda_io_num</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">GPIO_NUM_21</span></span>, <span class="n"><span class="pre">gpio_num_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">scl_io_num</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">GPIO_NUM_22</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEFAULT_INA226_I2C_ADDRESS</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6INA2268I2C_InitE10gpio_num_t10gpio_num_t8uint16_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Initializes the I2C of ESP-IDF. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sda_io_num</strong> – <strong>[in]</strong> GPIO number of SDA pin </p></li>
+<li><p><strong>scl_io_num</strong> – <strong>[in]</strong> GPIO number of SCL pin </p></li>
+<li><p><strong>address</strong> – <strong>[in]</strong> I2C address of <a class="reference internal" href="#classINA226"><span class="std std-ref">INA226</span></a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>std::expected&lt;void, std::runtime_error&gt; </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv413INA226_Driver">
+<span id="_CPPv313INA226_Driver"></span><span id="_CPPv213INA226_Driver"></span><span id="INA226_Driver"></span><span class="target" id="classINA226__Driver"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INA226_Driver</span></span></span><a class="headerlink" href="#_CPPv413INA226_Driver" title="Link to this definition"></a><br /></dt>
+<dd><p><a class="reference internal" href="#classINA226"><span class="std std-ref">INA226</span></a> driver class for controlling and accessing the <a class="reference internal" href="#classINA226"><span class="std std-ref">INA226</span></a> power monitor IC. </p>
+<p>The <a class="reference internal" href="#classINA226__Driver"><span class="std std-ref">INA226_Driver</span></a> class provides a set of functions to initialize the <a class="reference internal" href="#classINA226"><span class="std std-ref">INA226</span></a>, read various measurements, and configure its operating modes, averaging modes, conversion times, and alert triggers.</p>
+<p>This class is designed to be inherited and implemented by a specific I2C driver for the target platform. The I2C_Write and I2C_Read functions are abstract and need to be implemented by the derived class.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <a class="reference internal" href="#classINA226"><span class="std std-ref">INA226</span></a> is a power monitor IC that can measure shunt voltage, bus voltage, current, and power. It also supports various operating modes, averaging modes, and conversion times.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <a class="reference internal" href="#classINA226__Driver"><span class="std std-ref">INA226_Driver</span></a> class uses the std::expected type to handle errors and return values. If an error occurs, a std::runtime_error is returned with an error message.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <a class="reference internal" href="#classINA226__Driver"><span class="std std-ref">INA226_Driver</span></a> class is not thread-safe and should be used in a single-threaded environment. </p>
+</div>
+<p>Subclassed by <a class="reference internal" href="#classINA226"><span class="std std-ref">INA226</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-getters">Getters</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver18GetShuntVoltage_uVEv">
+<span id="_CPPv3N13INA226_Driver18GetShuntVoltage_uVEv"></span><span id="_CPPv2N13INA226_Driver18GetShuntVoltage_uVEv"></span><span id="INA226_Driver::GetShuntVoltage_uV"></span><span class="target" id="classINA226__Driver_1a59cb13340722162d568c0ca507240b98"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetShuntVoltage_uV</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13INA226_Driver18GetShuntVoltage_uVEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the Shunt Voltage in micro-Volts. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int32_t </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver16GetBusVoltage_mVEv">
+<span id="_CPPv3N13INA226_Driver16GetBusVoltage_mVEv"></span><span id="_CPPv2N13INA226_Driver16GetBusVoltage_mVEv"></span><span id="INA226_Driver::GetBusVoltage_mV"></span><span class="target" id="classINA226__Driver_1a815e0425d4d9a6de8a9de3d299ab6d81"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetBusVoltage_mV</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13INA226_Driver16GetBusVoltage_mVEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the Bus Voltage in milli-Volts. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int32_t </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver13GetCurrent_uAEv">
+<span id="_CPPv3N13INA226_Driver13GetCurrent_uAEv"></span><span id="_CPPv2N13INA226_Driver13GetCurrent_uAEv"></span><span id="INA226_Driver::GetCurrent_uA"></span><span class="target" id="classINA226__Driver_1aae8ecc2cc5d3fdb79907dfedef5b0317"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetCurrent_uA</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13INA226_Driver13GetCurrent_uAEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the Current in micro-Amps. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int32_t </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver11GetPower_uWEv">
+<span id="_CPPv3N13INA226_Driver11GetPower_uWEv"></span><span id="_CPPv2N13INA226_Driver11GetPower_uWEv"></span><span id="INA226_Driver::GetPower_uW"></span><span class="target" id="classINA226__Driver_1ad4407eaa1353cc1936c5e7e55c9105f3"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetPower_uW</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13INA226_Driver11GetPower_uWEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the Power in micro-Watts. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int32_t </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver9GetConfigEv">
+<span id="_CPPv3N13INA226_Driver9GetConfigEv"></span><span id="_CPPv2N13INA226_Driver9GetConfigEv"></span><span id="INA226_Driver::GetConfig"></span><span class="target" id="classINA226__Driver_1a6bf345dbc84d5792672a78983acb869d"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetConfig</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13INA226_Driver9GetConfigEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the configuration register value. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>uint16_t </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver17GetManufacturerIDEv">
+<span id="_CPPv3N13INA226_Driver17GetManufacturerIDEv"></span><span id="_CPPv2N13INA226_Driver17GetManufacturerIDEv"></span><span id="INA226_Driver::GetManufacturerID"></span><span class="target" id="classINA226__Driver_1ad051dd7c0595c1ca4594de5013354167"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetManufacturerID</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13INA226_Driver17GetManufacturerIDEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the manufacturer ID. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>uint16_t </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver8GetDieIDEv">
+<span id="_CPPv3N13INA226_Driver8GetDieIDEv"></span><span id="_CPPv2N13INA226_Driver8GetDieIDEv"></span><span id="INA226_Driver::GetDieID"></span><span class="target" id="classINA226__Driver_1af725c35fc7b70ebf2e26752d7abf23d5"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetDieID</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13INA226_Driver8GetDieIDEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the die ID. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>uint16_t </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver16GetOperatingModeEv">
+<span id="_CPPv3N13INA226_Driver16GetOperatingModeEv"></span><span id="_CPPv2N13INA226_Driver16GetOperatingModeEv"></span><span id="INA226_Driver::GetOperatingMode"></span><span class="target" id="classINA226__Driver_1a7eeb36a992d5c09ce34f79631aa92c99"></span><a class="reference internal" href="#_CPPv4N13INA226_Driver13OperatingModeE" title="INA226_Driver::OperatingMode"><span class="n"><span class="pre">OperatingMode</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetOperatingMode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13INA226_Driver16GetOperatingModeEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the operating mode. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>OperatingMode </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver16GetAveragingModeEv">
+<span id="_CPPv3N13INA226_Driver16GetAveragingModeEv"></span><span id="_CPPv2N13INA226_Driver16GetAveragingModeEv"></span><span id="INA226_Driver::GetAveragingMode"></span><span class="target" id="classINA226__Driver_1a5fe61177f6e049a9074dd0a1fd639dab"></span><a class="reference internal" href="#_CPPv4N13INA226_Driver13AveragingModeE" title="INA226_Driver::AveragingMode"><span class="n"><span class="pre">AveragingMode</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetAveragingMode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13INA226_Driver16GetAveragingModeEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the averaging mode. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>AveragingMode </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver27GetBusVoltageConversionTimeEv">
+<span id="_CPPv3N13INA226_Driver27GetBusVoltageConversionTimeEv"></span><span id="_CPPv2N13INA226_Driver27GetBusVoltageConversionTimeEv"></span><span id="INA226_Driver::GetBusVoltageConversionTime"></span><span class="target" id="classINA226__Driver_1af18c37ed30bc00537213a6e8260a83b7"></span><a class="reference internal" href="#_CPPv4N13INA226_Driver14ConversionTimeE" title="INA226_Driver::ConversionTime"><span class="n"><span class="pre">ConversionTime</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetBusVoltageConversionTime</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13INA226_Driver27GetBusVoltageConversionTimeEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the bus voltage conversion time. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ConversionTime </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver29GetShuntVoltageConversionTimeEv">
+<span id="_CPPv3N13INA226_Driver29GetShuntVoltageConversionTimeEv"></span><span id="_CPPv2N13INA226_Driver29GetShuntVoltageConversionTimeEv"></span><span id="INA226_Driver::GetShuntVoltageConversionTime"></span><span class="target" id="classINA226__Driver_1a13be0335f8fa02e0d1a762a765217592"></span><a class="reference internal" href="#_CPPv4N13INA226_Driver14ConversionTimeE" title="INA226_Driver::ConversionTime"><span class="n"><span class="pre">ConversionTime</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetShuntVoltageConversionTime</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13INA226_Driver29GetShuntVoltageConversionTimeEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the shunt voltage conversion time. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ConversionTime </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver19GetAlertTriggerMaskEv">
+<span id="_CPPv3N13INA226_Driver19GetAlertTriggerMaskEv"></span><span id="_CPPv2N13INA226_Driver19GetAlertTriggerMaskEv"></span><span id="INA226_Driver::GetAlertTriggerMask"></span><span class="target" id="classINA226__Driver_1ac7a8b32602751d296f88f4a561cf21bc"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetAlertTriggerMask</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13INA226_Driver19GetAlertTriggerMaskEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the alert trigger mask. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>uint16_t </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver18GetAlertLimitValueEv">
+<span id="_CPPv3N13INA226_Driver18GetAlertLimitValueEv"></span><span id="_CPPv2N13INA226_Driver18GetAlertLimitValueEv"></span><span id="INA226_Driver::GetAlertLimitValue"></span><span class="target" id="classINA226__Driver_1aabe05990ff94f481ffdba2af8299236c"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetAlertLimitValue</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13INA226_Driver18GetAlertLimitValueEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the alert limit value. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>uint16_t </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-setters">Setters</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver5ResetEv">
+<span id="_CPPv3N13INA226_Driver5ResetEv"></span><span id="_CPPv2N13INA226_Driver5ResetEv"></span><span id="INA226_Driver::Reset"></span><span class="target" id="classINA226__Driver_1a1b7d227e4624ad6d7b848fea174b729c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Reset</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13INA226_Driver5ResetEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Reset the <a class="reference internal" href="#classINA226"><span class="std std-ref">INA226</span></a>. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver9CalibrateEK8uint32_tK8uint32_t">
+<span id="_CPPv3N13INA226_Driver9CalibrateEK8uint32_tK8uint32_t"></span><span id="_CPPv2N13INA226_Driver9CalibrateEK8uint32_tK8uint32_t"></span><span id="INA226_Driver::Calibrate__uint32_tC.uint32_tC"></span><span class="target" id="classINA226__Driver_1a838e5345a550d92d7d426025c2cff3ed"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Calibrate</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ShuntResistor_mOhm</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">100</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">MaxCurrent_A</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13INA226_Driver9CalibrateEK8uint32_tK8uint32_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Calibrate the <a class="reference internal" href="#classINA226"><span class="std std-ref">INA226</span></a>. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Max current is limited by the value of shunt resistor. 0.1ohm shunt can measure up to (2^15 -1)* 2.5µV / 0.1ohm = 819175µA (=0.819175A) </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference external" href="https://github.com/esphome/issues/issues/2999#issuecomment-1038148627">https://github.com/esphome/issues/issues/2999#issuecomment-1038148627</a></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ShuntResistor_mOhm</strong> – <strong>[in]</strong> Shunt resistor value in milli-Ohms. Defaults to 100mOhm. </p></li>
+<li><p><strong>MaxCurrent_A</strong> – <strong>[in]</strong> Maximum current in Amps. Defaults to 1A.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver9SetConfigEK8uint16_t">
+<span id="_CPPv3N13INA226_Driver9SetConfigEK8uint16_t"></span><span id="_CPPv2N13INA226_Driver9SetConfigEK8uint16_t"></span><span id="INA226_Driver::SetConfig__uint16_tC"></span><span class="target" id="classINA226__Driver_1a827bca28b0690fd2090dc07e4336e01f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetConfig</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Config</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13INA226_Driver9SetConfigEK8uint16_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Set the configuration register value. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Config</strong> – <strong>[in]</strong> The configuration register value. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver16SetOperatingModeE13OperatingMode">
+<span id="_CPPv3N13INA226_Driver16SetOperatingModeE13OperatingMode"></span><span id="_CPPv2N13INA226_Driver16SetOperatingModeE13OperatingMode"></span><span id="INA226_Driver::SetOperatingMode__OperatingMode"></span><span class="target" id="classINA226__Driver_1af62f3e4edfe8cd7fea9873885bccd043"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetOperatingMode</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N13INA226_Driver13OperatingModeE" title="INA226_Driver::OperatingMode"><span class="n"><span class="pre">OperatingMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">Mode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13INA226_Driver16SetOperatingModeE13OperatingMode" title="Link to this definition"></a><br /></dt>
+<dd><p>Set the operating mode. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Mode</strong> – <strong>[in]</strong> The operating mode. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver16SetAveragingModeE13AveragingMode">
+<span id="_CPPv3N13INA226_Driver16SetAveragingModeE13AveragingMode"></span><span id="_CPPv2N13INA226_Driver16SetAveragingModeE13AveragingMode"></span><span id="INA226_Driver::SetAveragingMode__AveragingMode"></span><span class="target" id="classINA226__Driver_1aff2f890b348c196ac7890d150ffcce76"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetAveragingMode</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N13INA226_Driver13AveragingModeE" title="INA226_Driver::AveragingMode"><span class="n"><span class="pre">AveragingMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">Mode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13INA226_Driver16SetAveragingModeE13AveragingMode" title="Link to this definition"></a><br /></dt>
+<dd><p>Set the averaging mode. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Mode</strong> – <strong>[in]</strong> The averaging mode. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver27SetBusVoltageConversionTimeE14ConversionTime">
+<span id="_CPPv3N13INA226_Driver27SetBusVoltageConversionTimeE14ConversionTime"></span><span id="_CPPv2N13INA226_Driver27SetBusVoltageConversionTimeE14ConversionTime"></span><span id="INA226_Driver::SetBusVoltageConversionTime__ConversionTime"></span><span class="target" id="classINA226__Driver_1a165cb14e253fc55928e7ba69cfa87da8"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetBusVoltageConversionTime</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N13INA226_Driver14ConversionTimeE" title="INA226_Driver::ConversionTime"><span class="n"><span class="pre">ConversionTime</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">Time</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13INA226_Driver27SetBusVoltageConversionTimeE14ConversionTime" title="Link to this definition"></a><br /></dt>
+<dd><p>Set the bus voltage conversion time. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Time</strong> – <strong>[in]</strong> The bus voltage conversion time. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver29SetShuntVoltageConversionTimeE14ConversionTime">
+<span id="_CPPv3N13INA226_Driver29SetShuntVoltageConversionTimeE14ConversionTime"></span><span id="_CPPv2N13INA226_Driver29SetShuntVoltageConversionTimeE14ConversionTime"></span><span id="INA226_Driver::SetShuntVoltageConversionTime__ConversionTime"></span><span class="target" id="classINA226__Driver_1a2d65d12e653e2d0258a63e191dea80ff"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetShuntVoltageConversionTime</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N13INA226_Driver14ConversionTimeE" title="INA226_Driver::ConversionTime"><span class="n"><span class="pre">ConversionTime</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">Time</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13INA226_Driver29SetShuntVoltageConversionTimeE14ConversionTime" title="Link to this definition"></a><br /></dt>
+<dd><p>Set the shunt voltage conversion time. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Time</strong> – <strong>[in]</strong> The shunt voltage conversion time. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver19SetAlertTriggerMaskE16AlertTriggerMask">
+<span id="_CPPv3N13INA226_Driver19SetAlertTriggerMaskE16AlertTriggerMask"></span><span id="_CPPv2N13INA226_Driver19SetAlertTriggerMaskE16AlertTriggerMask"></span><span id="INA226_Driver::SetAlertTriggerMask__AlertTriggerMask"></span><span class="target" id="classINA226__Driver_1a0d5546a9157154799617104bd37ff8e6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetAlertTriggerMask</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N13INA226_Driver19SetAlertTriggerMaskE16AlertTriggerMask" title="INA226_Driver::SetAlertTriggerMask::AlertTriggerMask"><span class="n"><span class="pre">AlertTriggerMask</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">AlertTriggerMask</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13INA226_Driver19SetAlertTriggerMaskE16AlertTriggerMask" title="Link to this definition"></a><br /></dt>
+<dd><p>Set the alert trigger mask. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If multiple functions are enabled, the highest significant bit position Alert Function (D15-D11) takes priority and responds to the Alert Limit Register. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>AlertTriggerMask</strong> – <strong>[in]</strong> The alert trigger mask.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver18SetAlertLimitValueE8uint16_t">
+<span id="_CPPv3N13INA226_Driver18SetAlertLimitValueE8uint16_t"></span><span id="_CPPv2N13INA226_Driver18SetAlertLimitValueE8uint16_t"></span><span id="INA226_Driver::SetAlertLimitValue__uint16_t"></span><span class="target" id="classINA226__Driver_1a225783e9e55162175668d360cb694e5d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetAlertLimitValue</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">AlertLimitValue</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13INA226_Driver18SetAlertLimitValueE8uint16_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Set the alert limit value. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>AlertLimitValue</strong> – <strong>[in]</strong> The alert limit value. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver5ConstE">
+<span id="_CPPv3N13INA226_Driver5ConstE"></span><span id="_CPPv2N13INA226_Driver5ConstE"></span><span class="target" id="classINA226__Driver_1a390d4052eaf2b670d80cdade48ec39e4"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Const</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver5ConstE" title="Link to this definition"></a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver5Const18BUS_VOLTAGE_LSB_uVE">
+<span id="_CPPv3N13INA226_Driver5Const18BUS_VOLTAGE_LSB_uVE"></span><span id="_CPPv2N13INA226_Driver5Const18BUS_VOLTAGE_LSB_uVE"></span><span class="target" id="classINA226__Driver_1a390d4052eaf2b670d80cdade48ec39e4a3bf0c0cc965009a82d025163077dc49f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BUS_VOLTAGE_LSB_uV</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver5Const18BUS_VOLTAGE_LSB_uVE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver5Const20SHUNT_VOLTAGE_LSB_nVE">
+<span id="_CPPv3N13INA226_Driver5Const20SHUNT_VOLTAGE_LSB_nVE"></span><span id="_CPPv2N13INA226_Driver5Const20SHUNT_VOLTAGE_LSB_nVE"></span><span class="target" id="classINA226__Driver_1a390d4052eaf2b670d80cdade48ec39e4af06196cfb72e1b8c167bd8b7da2d0437"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SHUNT_VOLTAGE_LSB_nV</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver5Const20SHUNT_VOLTAGE_LSB_nVE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver5Const16POWER_LSB_FACTORE">
+<span id="_CPPv3N13INA226_Driver5Const16POWER_LSB_FACTORE"></span><span id="_CPPv2N13INA226_Driver5Const16POWER_LSB_FACTORE"></span><span class="target" id="classINA226__Driver_1a390d4052eaf2b670d80cdade48ec39e4a5ccdcdd756f248775c4199acfc9441ed"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">POWER_LSB_FACTOR</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver5Const16POWER_LSB_FACTORE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver5Const18CONFIG_RESET_VALUEE">
+<span id="_CPPv3N13INA226_Driver5Const18CONFIG_RESET_VALUEE"></span><span id="_CPPv2N13INA226_Driver5Const18CONFIG_RESET_VALUEE"></span><span class="target" id="classINA226__Driver_1a390d4052eaf2b670d80cdade48ec39e4acb9f45a16fb37c37325688b0ea630672"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CONFIG_RESET_VALUE</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver5Const18CONFIG_RESET_VALUEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver8RegisterE">
+<span id="_CPPv3N13INA226_Driver8RegisterE"></span><span id="_CPPv2N13INA226_Driver8RegisterE"></span><span class="target" id="classINA226__Driver_1a9c1b9c7c015fcaac7a8f54a1c4737911"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Register</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver8RegisterE" title="Link to this definition"></a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver8Register13CONFIGURATIONE">
+<span id="_CPPv3N13INA226_Driver8Register13CONFIGURATIONE"></span><span id="_CPPv2N13INA226_Driver8Register13CONFIGURATIONE"></span><span class="target" id="classINA226__Driver_1a9c1b9c7c015fcaac7a8f54a1c4737911ad08e68ea80bc3bf47a03757579c11900"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CONFIGURATION</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver8Register13CONFIGURATIONE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver8Register13SHUNT_VOLTAGEE">
+<span id="_CPPv3N13INA226_Driver8Register13SHUNT_VOLTAGEE"></span><span id="_CPPv2N13INA226_Driver8Register13SHUNT_VOLTAGEE"></span><span class="target" id="classINA226__Driver_1a9c1b9c7c015fcaac7a8f54a1c4737911a7fc9cd1fbabf1b2a15b658e57cada4db"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SHUNT_VOLTAGE</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver8Register13SHUNT_VOLTAGEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver8Register11BUS_VOLTAGEE">
+<span id="_CPPv3N13INA226_Driver8Register11BUS_VOLTAGEE"></span><span id="_CPPv2N13INA226_Driver8Register11BUS_VOLTAGEE"></span><span class="target" id="classINA226__Driver_1a9c1b9c7c015fcaac7a8f54a1c4737911a68ca1ec67c5ca0e0ecb7283980f2ea1f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BUS_VOLTAGE</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver8Register11BUS_VOLTAGEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver8Register5POWERE">
+<span id="_CPPv3N13INA226_Driver8Register5POWERE"></span><span id="_CPPv2N13INA226_Driver8Register5POWERE"></span><span class="target" id="classINA226__Driver_1a9c1b9c7c015fcaac7a8f54a1c4737911ac9c9c146c630ca5ef9197c73c032f4a6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">POWER</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver8Register5POWERE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver8Register7CURRENTE">
+<span id="_CPPv3N13INA226_Driver8Register7CURRENTE"></span><span id="_CPPv2N13INA226_Driver8Register7CURRENTE"></span><span class="target" id="classINA226__Driver_1a9c1b9c7c015fcaac7a8f54a1c4737911aa2770969c827f0f2910f6179418462df"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CURRENT</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver8Register7CURRENTE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver8Register11CALIBRATIONE">
+<span id="_CPPv3N13INA226_Driver8Register11CALIBRATIONE"></span><span id="_CPPv2N13INA226_Driver8Register11CALIBRATIONE"></span><span class="target" id="classINA226__Driver_1a9c1b9c7c015fcaac7a8f54a1c4737911a70542fff955dafe953f0aa7ae3635d0c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CALIBRATION</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver8Register11CALIBRATIONE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver8Register11MASK_ENABLEE">
+<span id="_CPPv3N13INA226_Driver8Register11MASK_ENABLEE"></span><span id="_CPPv2N13INA226_Driver8Register11MASK_ENABLEE"></span><span class="target" id="classINA226__Driver_1a9c1b9c7c015fcaac7a8f54a1c4737911a8e0408b529af07e9e1ce2dafd83110f6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MASK_ENABLE</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver8Register11MASK_ENABLEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver8Register11ALERT_LIMITE">
+<span id="_CPPv3N13INA226_Driver8Register11ALERT_LIMITE"></span><span id="_CPPv2N13INA226_Driver8Register11ALERT_LIMITE"></span><span class="target" id="classINA226__Driver_1a9c1b9c7c015fcaac7a8f54a1c4737911aa35dc9af95d3950842593debc2729222"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ALERT_LIMIT</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver8Register11ALERT_LIMITE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver8Register15MANUFACTURER_IDE">
+<span id="_CPPv3N13INA226_Driver8Register15MANUFACTURER_IDE"></span><span id="_CPPv2N13INA226_Driver8Register15MANUFACTURER_IDE"></span><span class="target" id="classINA226__Driver_1a9c1b9c7c015fcaac7a8f54a1c4737911aea9641d2c0b969b7c875ec96f3e926a1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MANUFACTURER_ID</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver8Register15MANUFACTURER_IDE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver8Register6DIE_IDE">
+<span id="_CPPv3N13INA226_Driver8Register6DIE_IDE"></span><span id="_CPPv2N13INA226_Driver8Register6DIE_IDE"></span><span class="target" id="classINA226__Driver_1a9c1b9c7c015fcaac7a8f54a1c4737911ad5bdbe66fe40e344f2a1fd9cbd2f02c1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DIE_ID</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver8Register6DIE_IDE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver10ConfigMaskE">
+<span id="_CPPv3N13INA226_Driver10ConfigMaskE"></span><span id="_CPPv2N13INA226_Driver10ConfigMaskE"></span><span class="target" id="classINA226__Driver_1a75b1cf5d9ddf54881225f20d01179cea"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ConfigMask</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver10ConfigMaskE" title="Link to this definition"></a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver10ConfigMask14OPERATING_MODEE">
+<span id="_CPPv3N13INA226_Driver10ConfigMask14OPERATING_MODEE"></span><span id="_CPPv2N13INA226_Driver10ConfigMask14OPERATING_MODEE"></span><span class="target" id="classINA226__Driver_1a75b1cf5d9ddf54881225f20d01179ceaa5523d309ee6f4029c6316ee67b23b06f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OPERATING_MODE</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver10ConfigMask14OPERATING_MODEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver10ConfigMask29SHUNT_VOLTAGE_CONVERSION_TIMEE">
+<span id="_CPPv3N13INA226_Driver10ConfigMask29SHUNT_VOLTAGE_CONVERSION_TIMEE"></span><span id="_CPPv2N13INA226_Driver10ConfigMask29SHUNT_VOLTAGE_CONVERSION_TIMEE"></span><span class="target" id="classINA226__Driver_1a75b1cf5d9ddf54881225f20d01179ceaa7b7ebcf66f9d5e506cc974dc25692744"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SHUNT_VOLTAGE_CONVERSION_TIME</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver10ConfigMask29SHUNT_VOLTAGE_CONVERSION_TIMEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver10ConfigMask27BUS_VOLTAGE_CONVERSION_TIMEE">
+<span id="_CPPv3N13INA226_Driver10ConfigMask27BUS_VOLTAGE_CONVERSION_TIMEE"></span><span id="_CPPv2N13INA226_Driver10ConfigMask27BUS_VOLTAGE_CONVERSION_TIMEE"></span><span class="target" id="classINA226__Driver_1a75b1cf5d9ddf54881225f20d01179ceaafbde2c16e895ec961e550d3a49b228d1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BUS_VOLTAGE_CONVERSION_TIME</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver10ConfigMask27BUS_VOLTAGE_CONVERSION_TIMEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver10ConfigMask14AVERAGING_MODEE">
+<span id="_CPPv3N13INA226_Driver10ConfigMask14AVERAGING_MODEE"></span><span id="_CPPv2N13INA226_Driver10ConfigMask14AVERAGING_MODEE"></span><span class="target" id="classINA226__Driver_1a75b1cf5d9ddf54881225f20d01179ceaafc13c1ffa07fa935d5e395b4950b2859"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AVERAGING_MODE</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver10ConfigMask14AVERAGING_MODEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver10ConfigMask5RESETE">
+<span id="_CPPv3N13INA226_Driver10ConfigMask5RESETE"></span><span id="_CPPv2N13INA226_Driver10ConfigMask5RESETE"></span><span class="target" id="classINA226__Driver_1a75b1cf5d9ddf54881225f20d01179ceaab5859d8721cfdc0312b2838b9c985bc1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RESET</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver10ConfigMask5RESETE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver12ConfigOffsetE">
+<span id="_CPPv3N13INA226_Driver12ConfigOffsetE"></span><span id="_CPPv2N13INA226_Driver12ConfigOffsetE"></span><span class="target" id="classINA226__Driver_1a4a0a29f6ce01f54078479611db97544e"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ConfigOffset</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver12ConfigOffsetE" title="Link to this definition"></a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver12ConfigOffset14OPERATING_MODEE">
+<span id="_CPPv3N13INA226_Driver12ConfigOffset14OPERATING_MODEE"></span><span id="_CPPv2N13INA226_Driver12ConfigOffset14OPERATING_MODEE"></span><span class="target" id="classINA226__Driver_1a4a0a29f6ce01f54078479611db97544ea5523d309ee6f4029c6316ee67b23b06f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OPERATING_MODE</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver12ConfigOffset14OPERATING_MODEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver12ConfigOffset29SHUNT_VOLTAGE_CONVERSION_TIMEE">
+<span id="_CPPv3N13INA226_Driver12ConfigOffset29SHUNT_VOLTAGE_CONVERSION_TIMEE"></span><span id="_CPPv2N13INA226_Driver12ConfigOffset29SHUNT_VOLTAGE_CONVERSION_TIMEE"></span><span class="target" id="classINA226__Driver_1a4a0a29f6ce01f54078479611db97544ea7b7ebcf66f9d5e506cc974dc25692744"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SHUNT_VOLTAGE_CONVERSION_TIME</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver12ConfigOffset29SHUNT_VOLTAGE_CONVERSION_TIMEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver12ConfigOffset27BUS_VOLTAGE_CONVERSION_TIMEE">
+<span id="_CPPv3N13INA226_Driver12ConfigOffset27BUS_VOLTAGE_CONVERSION_TIMEE"></span><span id="_CPPv2N13INA226_Driver12ConfigOffset27BUS_VOLTAGE_CONVERSION_TIMEE"></span><span class="target" id="classINA226__Driver_1a4a0a29f6ce01f54078479611db97544eafbde2c16e895ec961e550d3a49b228d1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BUS_VOLTAGE_CONVERSION_TIME</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver12ConfigOffset27BUS_VOLTAGE_CONVERSION_TIMEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver12ConfigOffset14AVERAGING_MODEE">
+<span id="_CPPv3N13INA226_Driver12ConfigOffset14AVERAGING_MODEE"></span><span id="_CPPv2N13INA226_Driver12ConfigOffset14AVERAGING_MODEE"></span><span class="target" id="classINA226__Driver_1a4a0a29f6ce01f54078479611db97544eafc13c1ffa07fa935d5e395b4950b2859"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AVERAGING_MODE</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver12ConfigOffset14AVERAGING_MODEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver12ConfigOffset5RESETE">
+<span id="_CPPv3N13INA226_Driver12ConfigOffset5RESETE"></span><span id="_CPPv2N13INA226_Driver12ConfigOffset5RESETE"></span><span class="target" id="classINA226__Driver_1a4a0a29f6ce01f54078479611db97544eab5859d8721cfdc0312b2838b9c985bc1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RESET</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver12ConfigOffset5RESETE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver13OperatingModeE">
+<span id="_CPPv3N13INA226_Driver13OperatingModeE"></span><span id="_CPPv2N13INA226_Driver13OperatingModeE"></span><span class="target" id="classINA226__Driver_1a7c5a05ae88ac3e058eb9dc11099a29f3"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OperatingMode</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver13OperatingModeE" title="Link to this definition"></a><br /></dt>
+<dd><p>Operating modes of <a class="reference internal" href="#classINA226"><span class="std std-ref">INA226</span></a>. </p>
+<p>Select continuous, triggered, or power-down mode of operation. Defaults to continuous shunt and bus measurement mode. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver13OperatingMode10POWER_DOWNE">
+<span id="_CPPv3N13INA226_Driver13OperatingMode10POWER_DOWNE"></span><span id="_CPPv2N13INA226_Driver13OperatingMode10POWER_DOWNE"></span><span class="target" id="classINA226__Driver_1a7c5a05ae88ac3e058eb9dc11099a29f3a62f255a0405c1614801a52285695c501"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">POWER_DOWN</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver13OperatingMode10POWER_DOWNE" title="Link to this definition"></a><br /></dt>
+<dd><p>Power-down mode. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver13OperatingMode23SHUNT_VOLTAGE_TRIGGEREDE">
+<span id="_CPPv3N13INA226_Driver13OperatingMode23SHUNT_VOLTAGE_TRIGGEREDE"></span><span id="_CPPv2N13INA226_Driver13OperatingMode23SHUNT_VOLTAGE_TRIGGEREDE"></span><span class="target" id="classINA226__Driver_1a7c5a05ae88ac3e058eb9dc11099a29f3a0c5ce782819fd6b4e308c146544eb42c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SHUNT_VOLTAGE_TRIGGERED</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver13OperatingMode23SHUNT_VOLTAGE_TRIGGEREDE" title="Link to this definition"></a><br /></dt>
+<dd><p>Shunt voltage triggered mode. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver13OperatingMode21BUS_VOLTAGE_TRIGGEREDE">
+<span id="_CPPv3N13INA226_Driver13OperatingMode21BUS_VOLTAGE_TRIGGEREDE"></span><span id="_CPPv2N13INA226_Driver13OperatingMode21BUS_VOLTAGE_TRIGGEREDE"></span><span class="target" id="classINA226__Driver_1a7c5a05ae88ac3e058eb9dc11099a29f3a99d103ec8f8140d5e0c71163b9655273"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BUS_VOLTAGE_TRIGGERED</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver13OperatingMode21BUS_VOLTAGE_TRIGGEREDE" title="Link to this definition"></a><br /></dt>
+<dd><p>Bus voltage triggered mode. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver13OperatingMode23SHUNT_AND_BUS_TRIGGEREDE">
+<span id="_CPPv3N13INA226_Driver13OperatingMode23SHUNT_AND_BUS_TRIGGEREDE"></span><span id="_CPPv2N13INA226_Driver13OperatingMode23SHUNT_AND_BUS_TRIGGEREDE"></span><span class="target" id="classINA226__Driver_1a7c5a05ae88ac3e058eb9dc11099a29f3a5e918d1bad9c18abae6bb7f54b75b32c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SHUNT_AND_BUS_TRIGGERED</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver13OperatingMode23SHUNT_AND_BUS_TRIGGEREDE" title="Link to this definition"></a><br /></dt>
+<dd><p>Shunt and bus voltage triggered mode. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver13OperatingMode7ADC_OFFE">
+<span id="_CPPv3N13INA226_Driver13OperatingMode7ADC_OFFE"></span><span id="_CPPv2N13INA226_Driver13OperatingMode7ADC_OFFE"></span><span class="target" id="classINA226__Driver_1a7c5a05ae88ac3e058eb9dc11099a29f3a43945a677a84cb88ac3e5b4425545fc4"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ADC_OFF</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver13OperatingMode7ADC_OFFE" title="Link to this definition"></a><br /></dt>
+<dd><p>ADC off mode. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver13OperatingMode24SHUNT_VOLTAGE_CONTINUOUSE">
+<span id="_CPPv3N13INA226_Driver13OperatingMode24SHUNT_VOLTAGE_CONTINUOUSE"></span><span id="_CPPv2N13INA226_Driver13OperatingMode24SHUNT_VOLTAGE_CONTINUOUSE"></span><span class="target" id="classINA226__Driver_1a7c5a05ae88ac3e058eb9dc11099a29f3a823893d6e8e62edee983e0ec174fb38a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SHUNT_VOLTAGE_CONTINUOUS</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver13OperatingMode24SHUNT_VOLTAGE_CONTINUOUSE" title="Link to this definition"></a><br /></dt>
+<dd><p>Continuous shunt voltage measurement mode. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver13OperatingMode22BUS_VOLTAGE_CONTINUOUSE">
+<span id="_CPPv3N13INA226_Driver13OperatingMode22BUS_VOLTAGE_CONTINUOUSE"></span><span id="_CPPv2N13INA226_Driver13OperatingMode22BUS_VOLTAGE_CONTINUOUSE"></span><span class="target" id="classINA226__Driver_1a7c5a05ae88ac3e058eb9dc11099a29f3af3e1350f731d966a874c4a419a9a85b4"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BUS_VOLTAGE_CONTINUOUS</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver13OperatingMode22BUS_VOLTAGE_CONTINUOUSE" title="Link to this definition"></a><br /></dt>
+<dd><p>Continuous bus voltage measurement mode. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver13OperatingMode24SHUNT_AND_BUS_CONTINUOUSE">
+<span id="_CPPv3N13INA226_Driver13OperatingMode24SHUNT_AND_BUS_CONTINUOUSE"></span><span id="_CPPv2N13INA226_Driver13OperatingMode24SHUNT_AND_BUS_CONTINUOUSE"></span><span class="target" id="classINA226__Driver_1a7c5a05ae88ac3e058eb9dc11099a29f3a6ae786734f1afd956a03f5b6be08d6d5"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SHUNT_AND_BUS_CONTINUOUS</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver13OperatingMode24SHUNT_AND_BUS_CONTINUOUSE" title="Link to this definition"></a><br /></dt>
+<dd><p>Continuous shunt and bus voltage measurement mode. </p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver13AveragingModeE">
+<span id="_CPPv3N13INA226_Driver13AveragingModeE"></span><span id="_CPPv2N13INA226_Driver13AveragingModeE"></span><span class="target" id="classINA226__Driver_1a7a14da89899bbacb07538be632f0d038"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AveragingMode</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver13AveragingModeE" title="Link to this definition"></a><br /></dt>
+<dd><p>Averaging modes of <a class="reference internal" href="#classINA226"><span class="std std-ref">INA226</span></a>. </p>
+<p>Select the number of samples to be averaged. Defaults to 1 sample. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver13AveragingMode8SAMPLE_1E">
+<span id="_CPPv3N13INA226_Driver13AveragingMode8SAMPLE_1E"></span><span id="_CPPv2N13INA226_Driver13AveragingMode8SAMPLE_1E"></span><span class="target" id="classINA226__Driver_1a7a14da89899bbacb07538be632f0d038af5b23f47f50a6fc20d07a6e16e0048e8"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SAMPLE_1</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver13AveragingMode8SAMPLE_1E" title="Link to this definition"></a><br /></dt>
+<dd><p>1 sample </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver13AveragingMode8SAMPLE_4E">
+<span id="_CPPv3N13INA226_Driver13AveragingMode8SAMPLE_4E"></span><span id="_CPPv2N13INA226_Driver13AveragingMode8SAMPLE_4E"></span><span class="target" id="classINA226__Driver_1a7a14da89899bbacb07538be632f0d038ae48a4b246bfb15086c9cc60f2f089164"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SAMPLE_4</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver13AveragingMode8SAMPLE_4E" title="Link to this definition"></a><br /></dt>
+<dd><p>4 samples </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver13AveragingMode9SAMPLE_16E">
+<span id="_CPPv3N13INA226_Driver13AveragingMode9SAMPLE_16E"></span><span id="_CPPv2N13INA226_Driver13AveragingMode9SAMPLE_16E"></span><span class="target" id="classINA226__Driver_1a7a14da89899bbacb07538be632f0d038ab801725df7da797180b73f171c7f9686"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SAMPLE_16</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver13AveragingMode9SAMPLE_16E" title="Link to this definition"></a><br /></dt>
+<dd><p>16 samples </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver13AveragingMode9SAMPLE_64E">
+<span id="_CPPv3N13INA226_Driver13AveragingMode9SAMPLE_64E"></span><span id="_CPPv2N13INA226_Driver13AveragingMode9SAMPLE_64E"></span><span class="target" id="classINA226__Driver_1a7a14da89899bbacb07538be632f0d038a43bcdbd80a67cf4fee8a52fd83fc9a9b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SAMPLE_64</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver13AveragingMode9SAMPLE_64E" title="Link to this definition"></a><br /></dt>
+<dd><p>64 samples </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver13AveragingMode10SAMPLE_128E">
+<span id="_CPPv3N13INA226_Driver13AveragingMode10SAMPLE_128E"></span><span id="_CPPv2N13INA226_Driver13AveragingMode10SAMPLE_128E"></span><span class="target" id="classINA226__Driver_1a7a14da89899bbacb07538be632f0d038a70f0ad253567ef34db56b35f4a624c28"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SAMPLE_128</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver13AveragingMode10SAMPLE_128E" title="Link to this definition"></a><br /></dt>
+<dd><p>128 samples </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver13AveragingMode10SAMPLE_256E">
+<span id="_CPPv3N13INA226_Driver13AveragingMode10SAMPLE_256E"></span><span id="_CPPv2N13INA226_Driver13AveragingMode10SAMPLE_256E"></span><span class="target" id="classINA226__Driver_1a7a14da89899bbacb07538be632f0d038a66a6f9380b18bf792b6f2740f6665e22"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SAMPLE_256</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver13AveragingMode10SAMPLE_256E" title="Link to this definition"></a><br /></dt>
+<dd><p>256 samples </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver13AveragingMode10SAMPLE_512E">
+<span id="_CPPv3N13INA226_Driver13AveragingMode10SAMPLE_512E"></span><span id="_CPPv2N13INA226_Driver13AveragingMode10SAMPLE_512E"></span><span class="target" id="classINA226__Driver_1a7a14da89899bbacb07538be632f0d038ac4f1a1c3e63884ec52d305e720d93651"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SAMPLE_512</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver13AveragingMode10SAMPLE_512E" title="Link to this definition"></a><br /></dt>
+<dd><p>512 samples </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver13AveragingMode11SAMPLE_1024E">
+<span id="_CPPv3N13INA226_Driver13AveragingMode11SAMPLE_1024E"></span><span id="_CPPv2N13INA226_Driver13AveragingMode11SAMPLE_1024E"></span><span class="target" id="classINA226__Driver_1a7a14da89899bbacb07538be632f0d038a088d9503cf0d28b33640eaeff695aa5f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SAMPLE_1024</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver13AveragingMode11SAMPLE_1024E" title="Link to this definition"></a><br /></dt>
+<dd><p>1024 samples </p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver14ConversionTimeE">
+<span id="_CPPv3N13INA226_Driver14ConversionTimeE"></span><span id="_CPPv2N13INA226_Driver14ConversionTimeE"></span><span class="target" id="classINA226__Driver_1a268a56663470d0155f86e67b51488917"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ConversionTime</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver14ConversionTimeE" title="Link to this definition"></a><br /></dt>
+<dd><p>Conversion times of <a class="reference internal" href="#classINA226"><span class="std std-ref">INA226</span></a>. </p>
+<p>Select the conversion time for shunt and bus voltage measurements. Defaults to 1100us (=1.1ms). </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver14ConversionTime11TIME_140_uSE">
+<span id="_CPPv3N13INA226_Driver14ConversionTime11TIME_140_uSE"></span><span id="_CPPv2N13INA226_Driver14ConversionTime11TIME_140_uSE"></span><span class="target" id="classINA226__Driver_1a268a56663470d0155f86e67b51488917aff5c3304704a5640e268e4c8294c0a8e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TIME_140_uS</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver14ConversionTime11TIME_140_uSE" title="Link to this definition"></a><br /></dt>
+<dd><p>140 microseconds </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver14ConversionTime11TIME_204_uSE">
+<span id="_CPPv3N13INA226_Driver14ConversionTime11TIME_204_uSE"></span><span id="_CPPv2N13INA226_Driver14ConversionTime11TIME_204_uSE"></span><span class="target" id="classINA226__Driver_1a268a56663470d0155f86e67b51488917abf4a6cbffd0e974d5b7ffaeca13c68c3"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TIME_204_uS</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver14ConversionTime11TIME_204_uSE" title="Link to this definition"></a><br /></dt>
+<dd><p>204 microseconds </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver14ConversionTime11TIME_332_uSE">
+<span id="_CPPv3N13INA226_Driver14ConversionTime11TIME_332_uSE"></span><span id="_CPPv2N13INA226_Driver14ConversionTime11TIME_332_uSE"></span><span class="target" id="classINA226__Driver_1a268a56663470d0155f86e67b51488917ab4ca5464f6cb34642a243dad34e530fa"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TIME_332_uS</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver14ConversionTime11TIME_332_uSE" title="Link to this definition"></a><br /></dt>
+<dd><p>332 microseconds </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver14ConversionTime11TIME_588_uSE">
+<span id="_CPPv3N13INA226_Driver14ConversionTime11TIME_588_uSE"></span><span id="_CPPv2N13INA226_Driver14ConversionTime11TIME_588_uSE"></span><span class="target" id="classINA226__Driver_1a268a56663470d0155f86e67b51488917a5d80729f46e642fe8227f0fa8ded1e2e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TIME_588_uS</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver14ConversionTime11TIME_588_uSE" title="Link to this definition"></a><br /></dt>
+<dd><p>588 microseconds </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver14ConversionTime12TIME_1100_uSE">
+<span id="_CPPv3N13INA226_Driver14ConversionTime12TIME_1100_uSE"></span><span id="_CPPv2N13INA226_Driver14ConversionTime12TIME_1100_uSE"></span><span class="target" id="classINA226__Driver_1a268a56663470d0155f86e67b51488917a92f94a89722e4baacb62dbf16cdbc25b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TIME_1100_uS</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver14ConversionTime12TIME_1100_uSE" title="Link to this definition"></a><br /></dt>
+<dd><p>1100 microseconds </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver14ConversionTime12TIME_2116_uSE">
+<span id="_CPPv3N13INA226_Driver14ConversionTime12TIME_2116_uSE"></span><span id="_CPPv2N13INA226_Driver14ConversionTime12TIME_2116_uSE"></span><span class="target" id="classINA226__Driver_1a268a56663470d0155f86e67b51488917a8588e25abf17a8c2a6fc3dd42e7092ef"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TIME_2116_uS</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver14ConversionTime12TIME_2116_uSE" title="Link to this definition"></a><br /></dt>
+<dd><p>2116 microseconds </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver14ConversionTime12TIME_4156_uSE">
+<span id="_CPPv3N13INA226_Driver14ConversionTime12TIME_4156_uSE"></span><span id="_CPPv2N13INA226_Driver14ConversionTime12TIME_4156_uSE"></span><span class="target" id="classINA226__Driver_1a268a56663470d0155f86e67b51488917a37dbf0b6d1245b7b438ead55847028f4"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TIME_4156_uS</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver14ConversionTime12TIME_4156_uSE" title="Link to this definition"></a><br /></dt>
+<dd><p>4156 microseconds </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver14ConversionTime12TIME_8244_uSE">
+<span id="_CPPv3N13INA226_Driver14ConversionTime12TIME_8244_uSE"></span><span id="_CPPv2N13INA226_Driver14ConversionTime12TIME_8244_uSE"></span><span class="target" id="classINA226__Driver_1a268a56663470d0155f86e67b51488917a127b756024223997bfad4362f825bfe3"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TIME_8244_uS</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver14ConversionTime12TIME_8244_uSE" title="Link to this definition"></a><br /></dt>
+<dd><p>8244 microseconds </p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver16AlertTriggerMaskE">
+<span id="_CPPv3N13INA226_Driver16AlertTriggerMaskE"></span><span id="_CPPv2N13INA226_Driver16AlertTriggerMaskE"></span><span class="target" id="classINA226__Driver_1abd9fd7d04df4251e01088b723b48d9bd"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AlertTriggerMask</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver16AlertTriggerMaskE" title="Link to this definition"></a><br /></dt>
+<dd><p>Alert trigger masks of <a class="reference internal" href="#classINA226"><span class="std std-ref">INA226</span></a>. </p>
+<p>Select the alert trigger masks. Defaults to all disabled (Transparent mode). </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver16AlertTriggerMask18SHUNT_OVER_VOLTAGEE">
+<span id="_CPPv3N13INA226_Driver16AlertTriggerMask18SHUNT_OVER_VOLTAGEE"></span><span id="_CPPv2N13INA226_Driver16AlertTriggerMask18SHUNT_OVER_VOLTAGEE"></span><span class="target" id="classINA226__Driver_1abd9fd7d04df4251e01088b723b48d9bda306f624b5b832dd9c3de0fd42c803ac6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SHUNT_OVER_VOLTAGE</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver16AlertTriggerMask18SHUNT_OVER_VOLTAGEE" title="Link to this definition"></a><br /></dt>
+<dd><p>Shunt over-voltage trigger mask. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver16AlertTriggerMask19SHUNT_UNDER_VOLTAGEE">
+<span id="_CPPv3N13INA226_Driver16AlertTriggerMask19SHUNT_UNDER_VOLTAGEE"></span><span id="_CPPv2N13INA226_Driver16AlertTriggerMask19SHUNT_UNDER_VOLTAGEE"></span><span class="target" id="classINA226__Driver_1abd9fd7d04df4251e01088b723b48d9bda06b26bc1166121b54fcd94fa3e97dbc3"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SHUNT_UNDER_VOLTAGE</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver16AlertTriggerMask19SHUNT_UNDER_VOLTAGEE" title="Link to this definition"></a><br /></dt>
+<dd><p>Shunt under-voltage trigger mask. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver16AlertTriggerMask16BUS_OVER_VOLTAGEE">
+<span id="_CPPv3N13INA226_Driver16AlertTriggerMask16BUS_OVER_VOLTAGEE"></span><span id="_CPPv2N13INA226_Driver16AlertTriggerMask16BUS_OVER_VOLTAGEE"></span><span class="target" id="classINA226__Driver_1abd9fd7d04df4251e01088b723b48d9bda138d64e6fc66c15c0bbfd0c6a35dac87"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BUS_OVER_VOLTAGE</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver16AlertTriggerMask16BUS_OVER_VOLTAGEE" title="Link to this definition"></a><br /></dt>
+<dd><p>Bus over-voltage trigger mask. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver16AlertTriggerMask17BUS_UNDER_VOLTAGEE">
+<span id="_CPPv3N13INA226_Driver16AlertTriggerMask17BUS_UNDER_VOLTAGEE"></span><span id="_CPPv2N13INA226_Driver16AlertTriggerMask17BUS_UNDER_VOLTAGEE"></span><span class="target" id="classINA226__Driver_1abd9fd7d04df4251e01088b723b48d9bdaae1ca5938ed4984b9a04151ef84a3749"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BUS_UNDER_VOLTAGE</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver16AlertTriggerMask17BUS_UNDER_VOLTAGEE" title="Link to this definition"></a><br /></dt>
+<dd><p>Bus under-voltage trigger mask. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver16AlertTriggerMask16POWER_OVER_LIMITE">
+<span id="_CPPv3N13INA226_Driver16AlertTriggerMask16POWER_OVER_LIMITE"></span><span id="_CPPv2N13INA226_Driver16AlertTriggerMask16POWER_OVER_LIMITE"></span><span class="target" id="classINA226__Driver_1abd9fd7d04df4251e01088b723b48d9bda7f9c8c230fb5a52543d17592760d3369"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">POWER_OVER_LIMIT</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver16AlertTriggerMask16POWER_OVER_LIMITE" title="Link to this definition"></a><br /></dt>
+<dd><p>Power over-limit trigger mask. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver16AlertTriggerMask16CONVERSION_READYE">
+<span id="_CPPv3N13INA226_Driver16AlertTriggerMask16CONVERSION_READYE"></span><span id="_CPPv2N13INA226_Driver16AlertTriggerMask16CONVERSION_READYE"></span><span class="target" id="classINA226__Driver_1abd9fd7d04df4251e01088b723b48d9bda9006fbf10cc9b8b3114ee3b3624f2738"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CONVERSION_READY</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver16AlertTriggerMask16CONVERSION_READYE" title="Link to this definition"></a><br /></dt>
+<dd><p>Conversion ready trigger mask. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver16AlertTriggerMask19ALERT_FUNCTION_FLAGE">
+<span id="_CPPv3N13INA226_Driver16AlertTriggerMask19ALERT_FUNCTION_FLAGE"></span><span id="_CPPv2N13INA226_Driver16AlertTriggerMask19ALERT_FUNCTION_FLAGE"></span><span class="target" id="classINA226__Driver_1abd9fd7d04df4251e01088b723b48d9bdad0120d5088c2f9cd255c0a06ef1d6baf"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ALERT_FUNCTION_FLAG</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver16AlertTriggerMask19ALERT_FUNCTION_FLAGE" title="Link to this definition"></a><br /></dt>
+<dd><p>Alert function flag trigger mask. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver16AlertTriggerMask21CONVERSION_READY_FLAGE">
+<span id="_CPPv3N13INA226_Driver16AlertTriggerMask21CONVERSION_READY_FLAGE"></span><span id="_CPPv2N13INA226_Driver16AlertTriggerMask21CONVERSION_READY_FLAGE"></span><span class="target" id="classINA226__Driver_1abd9fd7d04df4251e01088b723b48d9bdad9293a32ef4f478fad23a1836b2b729e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CONVERSION_READY_FLAG</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver16AlertTriggerMask21CONVERSION_READY_FLAGE" title="Link to this definition"></a><br /></dt>
+<dd><p>Conversion ready flag trigger mask. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver16AlertTriggerMask18MATH_OVERFLOW_FLAGE">
+<span id="_CPPv3N13INA226_Driver16AlertTriggerMask18MATH_OVERFLOW_FLAGE"></span><span id="_CPPv2N13INA226_Driver16AlertTriggerMask18MATH_OVERFLOW_FLAGE"></span><span class="target" id="classINA226__Driver_1abd9fd7d04df4251e01088b723b48d9bda1665524192ed0a0198954e11c874db30"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MATH_OVERFLOW_FLAG</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver16AlertTriggerMask18MATH_OVERFLOW_FLAGE" title="Link to this definition"></a><br /></dt>
+<dd><p>Math overflow flag trigger mask. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver16AlertTriggerMask14ALERT_POLARITYE">
+<span id="_CPPv3N13INA226_Driver16AlertTriggerMask14ALERT_POLARITYE"></span><span id="_CPPv2N13INA226_Driver16AlertTriggerMask14ALERT_POLARITYE"></span><span class="target" id="classINA226__Driver_1abd9fd7d04df4251e01088b723b48d9bda4d46b1af15de71beb257e0c72f43405c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ALERT_POLARITY</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver16AlertTriggerMask14ALERT_POLARITYE" title="Link to this definition"></a><br /></dt>
+<dd><p>Alert polarity trigger mask. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver16AlertTriggerMask18ALERT_LATCH_ENABLEE">
+<span id="_CPPv3N13INA226_Driver16AlertTriggerMask18ALERT_LATCH_ENABLEE"></span><span id="_CPPv2N13INA226_Driver16AlertTriggerMask18ALERT_LATCH_ENABLEE"></span><span class="target" id="classINA226__Driver_1abd9fd7d04df4251e01088b723b48d9bda1ceb865568d888823465ee65168219a9"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ALERT_LATCH_ENABLE</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver16AlertTriggerMask18ALERT_LATCH_ENABLEE" title="Link to this definition"></a><br /></dt>
+<dd><p>Alert latch enable trigger mask. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver16AlertTriggerMask5ERRORE">
+<span id="_CPPv3N13INA226_Driver16AlertTriggerMask5ERRORE"></span><span id="_CPPv2N13INA226_Driver16AlertTriggerMask5ERRORE"></span><span class="target" id="classINA226__Driver_1abd9fd7d04df4251e01088b723b48d9bdabb1ca97ec761fc37101737ba0aa2e7c5"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ERROR</span></span></span><a class="headerlink" href="#_CPPv4N13INA226_Driver16AlertTriggerMask5ERRORE" title="Link to this definition"></a><br /></dt>
+<dd><p>Error trigger mask. </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13INA226_Driver4InitEK8uint32_tK8uint32_t">
+<span id="_CPPv3N13INA226_Driver4InitEK8uint32_tK8uint32_t"></span><span id="_CPPv2N13INA226_Driver4InitEK8uint32_tK8uint32_t"></span><span id="INA226_Driver::Init__uint32_tC.uint32_tC"></span><span class="target" id="classINA226__Driver_1a08ff76529dfe2a8d546b649419121c2f"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">expected</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">runtime_error</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Init</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ShuntResistor_mOhm</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">100</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">MaxCurrent_A</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13INA226_Driver4InitEK8uint32_tK8uint32_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Initializes the <a class="reference internal" href="#classINA226"><span class="std std-ref">INA226</span></a> driver. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ShuntResistor_mOhm</strong> – <strong>[in]</strong> Shunt resistor value in milli-Ohms. Defaults to 100mOhm. </p></li>
+<li><p><strong>MaxCurrent_A</strong> – <strong>[in]</strong> Maximum current in Amps. Defaults to 1A. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>std::expected&lt;void, std::runtime_error&gt; </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Ziv Low.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

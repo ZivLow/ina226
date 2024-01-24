@@ -4,3 +4,7 @@ managed_components
 dependencies.lock
 sdkconfig
 sdkconfig.old
+
+# Doc build artifacts
+docs/_build/
+docs/xml/
