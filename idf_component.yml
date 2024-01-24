@@ -1,0 +1,17 @@
+description: INA226 driver
+
+url: https://github.com/ZivLow/ina226
+issues: https://github.com/ZivLow/ina226/issues
+documentation: https://zivlow.github.io/ina226/html/index.html
+repository: https://github.com/ZivLow/ina226.git
+
+maintainers:
+  - "Ziv Low"
+
+dependencies:
+  idf: ">=5.2"
+
+files:
+  exclude:
+    - "datasheet"
+    - "docs"

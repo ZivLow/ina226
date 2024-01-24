@@ -2,17 +2,18 @@
 
 This library is an ESP-IDF component for the INA226 power monitor IC.
 
+## Using component
+```
+idf.py add-dependency "zivlow/ina226"
+```
+
 ## Example
-An example ESP-IDF project using this INA226 component can be found at the directory [examples](examples/ina226-example).
-
-### Flashing example to ESP32
-1. Navigate to example directory
 ```
-cd examples/ina226-example
+idf.py create-project-from-example "zivlow/ina226:ina226-example"
 ```
 
-2. Flash
 ```
+cd ina226-example
 idf.py flash monitor
 ```
 
