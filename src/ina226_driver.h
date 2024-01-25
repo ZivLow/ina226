@@ -16,7 +16,6 @@
 
 #pragma once
 
-#include <inttypes.h>
 #include <expected>
 #include <stdexcept>
 
@@ -126,7 +125,7 @@ public:
      * @param[in] MaxCurrent_A Maximum current in Amps. Defaults to 1A.
      * @return std::expected<void, std::runtime_error> 
      */
-    std::expected<void, std::runtime_error> Init(const uint32_t ShuntResistor_mOhm = 100, const uint32_t MaxCurrent_A = 1);
+    std::expected<void, std::runtime_error> InitDriver(const uint32_t ShuntResistor_mOhm = CONFIG_INA226_SHUNT_RESISTOR_MILLIOHMS, const uint32_t MaxCurrent_A = CONFIG_INA226_MAX_CURRENT_AMPS);
 
     /**
      * @name Getters

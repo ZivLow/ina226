@@ -16,11 +16,12 @@
 
 #pragma once
 
+#include <expected>
+#include <stdexcept>
 #include "ina226_driver.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/semphr.h"
 #include "driver/i2c_master.h"
-#include <string>
 
 
 #define DEFAULT_INA226_I2C_ADDRESS 0x40
@@ -37,12 +38,13 @@ public:
     /**
      * @brief Initializes the I2C of ESP-IDF
      * 
-     * @param[in] sda_io_num GPIO number of SDA pin
-     * @param[in] scl_io_num GPIO number of SCL pin
-     * @param[in] address I2C address of INA226
-     * @return std::expected<void, std::runtime_error> 
+     * @param[in] sda_io_num GPIO number of SDA pin. Defaults to GPIO 21 for ESP32.
+     * @param[in] scl_io_num GPIO number of SCL pin. Defaults to GPIO 22 for ESP32.
+     * @param[in] address I2C address of INA226. Defaults to 0x40.
+     * @param[in] scl_frequency Frequency of SCL pin. Defaults to 100000.
+     * @param[in] i2c_port_num I2C port number.
      */
-    std::expected<void, std::runtime_error> I2C_Init(gpio_num_t sda_io_num = GPIO_NUM_21, gpio_num_t scl_io_num = GPIO_NUM_22, uint16_t address = DEFAULT_INA226_I2C_ADDRESS);
+    INA226(const gpio_num_t sda_io_num = static_cast<gpio_num_t>(CONFIG_I2C_MASTER_SDA), const gpio_num_t scl_io_num = static_cast<gpio_num_t>(CONFIG_I2C_MASTER_SCL), const uint16_t address = CONFIG_INA226_I2C_ADDRESS, const uint32_t scl_frequency = CONFIG_I2C_MASTER_FREQUENCY, const i2c_port_num_t i2c_port_num = static_cast<i2c_port_num_t>(CONFIG_I2C_MASTER_PORT_NUM));
 
 protected:
     /**
@@ -61,15 +63,6 @@ protected:
      * @return std::expected<uint16_t, std::runtime_error> 
      */
     std::expected<uint16_t, std::runtime_error> I2C_Read(const Register Register) override;
-
-    /**
-     * @brief Handles I2C related errors.
-     * 
-     * @param[in] operation The operation that caused the error
-     * @param[in] err The error code
-     * @return std::expected<void, std::runtime_error>
-     */
-    std::expected<void, std::runtime_error> HandleI2CError(const std::string &operation, esp_err_t err);
 
     /**
      * @brief Creates a mutex for I2C bus

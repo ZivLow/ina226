@@ -16,6 +16,7 @@
 
 #include "ina226_interface.h"
 #include <utility>
+#include <string>
 #include "esp_err.h"
 
 #define I2C_TIMEOUT_MS 100
@@ -74,58 +75,43 @@ std::expected<uint16_t, std::runtime_error> INA226::I2C_Read(const INA226::Regis
     }
 }
 
-std::expected<void, std::runtime_error> INA226::I2C_Init(gpio_num_t sda_io_num, gpio_num_t scl_io_num, uint16_t address) {
-    esp_err_t err;
-
-    i2c_bus_config = {
-        .i2c_port = -1,
+INA226::INA226(const gpio_num_t sda_io_num, const gpio_num_t scl_io_num, const uint16_t address, const uint32_t scl_frequency, const i2c_port_num_t i2c_port_num)
+    : i2c_bus_config{
+        .i2c_port = i2c_port_num,
         .sda_io_num = sda_io_num,
         .scl_io_num = scl_io_num,
         .clk_source = I2C_CLK_SRC_DEFAULT,
         .glitch_ignore_cnt = 7,
         .intr_priority = 0,
-        .trans_queue_depth = 0,     // ESP-IDF v5.2-beta2: Memory leak will occur if trans_queue_depth > 0, as it will use asynchronous i2c
-        .flags {
+        .trans_queue_depth = 0,
+        .flags{
             .enable_internal_pullup = true,
         },
-    };
-
-    i2c_dev_cfg = {
+    },
+    i2c_dev_cfg{
         .dev_addr_length = I2C_ADDR_BIT_LEN_7,
         .device_address = address,
-        .scl_speed_hz = 100000,
-    };
+        .scl_speed_hz = scl_frequency,
+    } 
+    
+{
+    esp_err_t err;
 
     err = i2c_new_master_bus(&i2c_bus_config, &i2c_bus_handle);
-    if (err != ESP_OK) {
-        return HandleI2CError("I2C bus initialization", err);
-    }
+    if (err != ESP_OK)
+        throw std::runtime_error("I2C bus initialization failed. err = " + std::to_string(err));
 
     err = i2c_master_bus_add_device(i2c_bus_handle, &i2c_dev_cfg, &i2c_dev_handle);
-    if (err != ESP_OK) {
-        return HandleI2CError("I2C add device", err);
-    }
+    if (err != ESP_OK)
+        throw std::runtime_error("I2C add device failed. err = " + std::to_string(err));
 
     err = CreateMutex(Lock);
-    if (err != ESP_OK) {
-        return HandleI2CError("I2C mutex creation", err);
-    }
+    if (err != ESP_OK)
+        throw std::runtime_error("I2C mutex creation failed. err = " + std::to_string(err));
 
-    return {};
-}
-
-std::expected<void, std::runtime_error> INA226::HandleI2CError(const std::string &operation, esp_err_t err) {
-    std::string errorMessage = operation + " failed. err = " + std::to_string(err);
-    switch (err) {
-        case ESP_ERR_INVALID_ARG:
-            return std::unexpected(std::runtime_error(errorMessage + ": invalid argument"));
-        case ESP_ERR_NO_MEM:
-            return std::unexpected(std::runtime_error(errorMessage + ": out of memory"));
-        case ESP_ERR_NOT_FOUND:
-            return std::unexpected(std::runtime_error(errorMessage + ": no more free I2C bus"));
-        default:
-            return std::unexpected(std::runtime_error(errorMessage));
-    }
+    auto start_driver = InitDriver();
+    if (start_driver.has_value() == false)
+        throw std::runtime_error(std::string("INA226 driver initialization failed. err = ") + start_driver.error().what());
 }
 
 esp_err_t INA226::CreateMutex(SemaphoreHandle_t &mutex) {

@@ -15,10 +15,10 @@
  */
 
 #include "ina226_driver.h"
+#include <inttypes.h>
 #include <cmath>
 #include <format>
 #include <utility>
-#include "esp_log.h"
 
 enum class INA226_Driver::Const : uint16_t {
     BUS_VOLTAGE_LSB_uV = 1250,      // 1250 uV/bit 
@@ -56,11 +56,10 @@ enum class INA226_Driver::ConfigOffset : uint8_t {
     RESET = 15,
 };
 
-std::expected<void, std::runtime_error> INA226_Driver::Init(const uint32_t ShuntResistor_mOhm, const uint32_t MaxCurrent_A) {
+std::expected<void, std::runtime_error> INA226_Driver::InitDriver(const uint32_t ShuntResistor_mOhm, const uint32_t MaxCurrent_A) {
     Reset();
     auto config = GetConfig();
     if (config == std::to_underlying(Const::CONFIG_RESET_VALUE)) {
-        ESP_LOGW("INA226-Driver", "Init calibrating");
         Calibrate(ShuntResistor_mOhm, MaxCurrent_A);
         return {};
     }
@@ -86,10 +85,8 @@ int32_t INA226_Driver::GetBusVoltage_mV() {
 int32_t INA226_Driver::GetCurrent_uA() {
     auto result = I2C_Read(Register::CURRENT);
     if (result.has_value()) {
-        ESP_LOGW("INA226-Driver", "GetCurrent_uA has value of %" PRIu16, result.value());
         return static_cast<int16_t>(result.value()) * Current_LSB_uA;
     }
-    ESP_LOGW("INA226-Driver", "GetCurrent_uA has no value");
     return 0;
 }
 
@@ -175,9 +172,7 @@ void INA226_Driver::Reset() {
 
 void INA226_Driver::Calibrate(const uint32_t ShuntResistor_mOhm, const uint32_t MaxCurrent_A) {
     Current_LSB_uA = std::ceil(MaxCurrent_A * 1000000 / (1 << 15));
-    ESP_LOGW("INA226_Driver", "Current_LSB_uA = %" PRIu16, Current_LSB_uA);
     auto cal = static_cast<uint16_t>(0.00512 / (ShuntResistor_mOhm / 1000.0) / (Current_LSB_uA / 1000000.0));
-    ESP_LOGW("INA226_Driver", "cal = %" PRIu16, cal);
     I2C_Write(Register::CALIBRATION, cal);
 }
 

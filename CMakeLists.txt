@@ -18,5 +18,6 @@ idf_component_register(
     REQUIRES driver
 )
 
-set_property(TARGET ${COMPONENT_LIB} PROPERTY CXX_STANDARD 23)
-set_property(TARGET ${COMPONENT_LIB} PROPERTY C_STANDARD 17)
+target_compile_features(${COMPONENT_LIB} PUBLIC cxx_std_23)
+target_compile_features(${COMPONENT_LIB} PUBLIC c_std_23)
+target_compile_options(${COMPONENT_LIB} PRIVATE -fexceptions -frtti)
