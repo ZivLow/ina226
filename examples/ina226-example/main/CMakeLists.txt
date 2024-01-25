@@ -16,5 +16,5 @@ idf_component_register(SRCS "ina226-example.cpp"
                     INCLUDE_DIRS "."
                     PRIV_REQUIRES ina226)
 
-set_property(TARGET ${COMPONENT_LIB} PROPERTY CXX_STANDARD 23)
-set_property(TARGET ${COMPONENT_LIB} PROPERTY C_STANDARD 17)
+target_compile_features(${COMPONENT_LIB} PUBLIC cxx_std_23)
+target_compile_features(${COMPONENT_LIB} PUBLIC c_std_23)

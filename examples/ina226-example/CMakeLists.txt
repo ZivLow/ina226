@@ -16,6 +16,3 @@ cmake_minimum_required(VERSION 3.5)
 
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
 project(ina226-example)
-
-idf_build_set_property(CXX_COMPILE_OPTIONS "-std=gnu++23;-Os;" APPEND)
-idf_build_set_property(C_COMPILE_OPTIONS "-std=gnu17;-Os" APPEND)
