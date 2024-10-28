@@ -46,6 +46,15 @@ public:
      */
     INA226(const gpio_num_t sda_io_num = static_cast<gpio_num_t>(CONFIG_I2C_MASTER_SDA), const gpio_num_t scl_io_num = static_cast<gpio_num_t>(CONFIG_I2C_MASTER_SCL), const uint16_t address = CONFIG_INA226_I2C_ADDRESS, const uint32_t scl_frequency = CONFIG_I2C_MASTER_FREQUENCY, const i2c_port_num_t i2c_port_num = static_cast<i2c_port_num_t>(CONFIG_I2C_MASTER_PORT_NUM));
 
+    /**
+     * @brief Initializes the INA226 using an existing I2C handle.
+     * 
+     * @param[in] i2c_bus_handle Existing I2C bus handle to use for this INA226.
+     * @param[in] address I2C address of INA226. Defaults to 0x40.
+     * @param[in] scl_frequency Frequency of SCL pin. Defaults to 100000.
+     */
+    INA226(i2c_master_bus_handle_t i2c_bus_handle, const uint16_t address = CONFIG_INA226_I2C_ADDRESS, const uint32_t scl_frequency = CONFIG_I2C_MASTER_FREQUENCY);
+
 protected:
     /**
      * @brief I2C write function for ESP-IDF. Converts from little endian (ESP-IDF) to big endian (INA226).

@@ -114,6 +114,27 @@ INA226::INA226(const gpio_num_t sda_io_num, const gpio_num_t scl_io_num, const u
         throw std::runtime_error(std::string("INA226 driver initialization failed. err = ") + start_driver.error().what());
 }
 
+INA226::INA226(i2c_master_bus_handle_t bus_handle, const uint16_t address, const uint32_t scl_frequency)
+    : i2c_bus_handle(bus_handle),
+    i2c_dev_cfg{
+        .dev_addr_length = I2C_ADDR_BIT_LEN_7,
+        .device_address = address,
+        .scl_speed_hz = scl_frequency,
+    }
+{
+    esp_err_t err = i2c_master_bus_add_device(i2c_bus_handle, &i2c_dev_cfg, &i2c_dev_handle);
+    if (err != ESP_OK)
+        throw std::runtime_error("I2C add device failed. err = " + std::to_string(err));
+
+    err = CreateMutex(Lock);
+    if (err != ESP_OK)
+        throw std::runtime_error("I2C mutex creation failed. err = " + std::to_string(err));
+
+    auto start_driver = InitDriver();
+    if (start_driver.has_value() == false)
+        throw std::runtime_error(std::string("INA226 driver initialization failed. err = ") + start_driver.error().what());
+}
+
 esp_err_t INA226::CreateMutex(SemaphoreHandle_t &mutex) {
     mutex = xSemaphoreCreateMutex();
     if (!mutex) {
