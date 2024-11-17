@@ -16,7 +16,7 @@
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=5929fcd5"></script>
-        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -49,6 +49,7 @@
 <li><a class="reference internal" href="#api">API</a><ul>
 <li><a class="reference internal" href="#_CPPv46INA226"><code class="docutils literal notranslate"><span class="pre">INA226</span></code></a><ul>
 <li><a class="reference internal" href="#_CPPv4N6INA2266INA226EK10gpio_num_tK10gpio_num_tK8uint16_tK8uint32_tK14i2c_port_num_t"><code class="docutils literal notranslate"><span class="pre">INA226::INA226()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6INA2266INA226E23i2c_master_bus_handle_tK8uint16_tK8uint32_t"><code class="docutils literal notranslate"><span class="pre">INA226::INA226()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#_CPPv413INA226_Driver"><code class="docutils literal notranslate"><span class="pre">INA226_Driver</span></code></a><ul>
@@ -225,6 +226,21 @@ This C++ library is written specifically for the ESP-IDF platform (at least ESP-
 <li><p><strong>address</strong> – <strong>[in]</strong> I2C address of <a class="reference internal" href="#classINA226"><span class="std std-ref">INA226</span></a>. Defaults to 0x40. </p></li>
 <li><p><strong>scl_frequency</strong> – <strong>[in]</strong> Frequency of SCL pin. Defaults to 100000. </p></li>
 <li><p><strong>i2c_port_num</strong> – <strong>[in]</strong> I2C port number. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6INA2266INA226E23i2c_master_bus_handle_tK8uint16_tK8uint32_t">
+<span id="_CPPv3N6INA2266INA226E23i2c_master_bus_handle_tK8uint16_tK8uint32_t"></span><span id="_CPPv2N6INA2266INA226E23i2c_master_bus_handle_tK8uint16_tK8uint32_t"></span><span id="INA226::INA226__i2c_master_bus_handle_t.uint16_tC.uint32_tC"></span><span class="target" id="classINA226_1a22716bd215d65da68e8161440528e52a"></span><span class="sig-name descname"><span class="n"><span class="pre">INA226</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">i2c_master_bus_handle_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i2c_bus_handle</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">CONFIG_INA226_I2C_ADDRESS</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">scl_frequency</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">CONFIG_I2C_MASTER_FREQUENCY</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6INA2266INA226E23i2c_master_bus_handle_tK8uint16_tK8uint32_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Initializes the <a class="reference internal" href="#classINA226"><span class="std std-ref">INA226</span></a> using an existing I2C handle. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>i2c_bus_handle</strong> – <strong>[in]</strong> Existing I2C bus handle to use for this <a class="reference internal" href="#classINA226"><span class="std std-ref">INA226</span></a>. </p></li>
+<li><p><strong>address</strong> – <strong>[in]</strong> I2C address of <a class="reference internal" href="#classINA226"><span class="std std-ref">INA226</span></a>. Defaults to 0x40. </p></li>
+<li><p><strong>scl_frequency</strong> – <strong>[in]</strong> Frequency of SCL pin. Defaults to 100000. </p></li>
 </ul>
 </dd>
 </dl>
